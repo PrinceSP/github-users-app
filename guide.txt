@@ -1,0 +1,31 @@
+colors:
+    --lm-bg: #F6F8FF;
+    --lm-bg-content: #FEFEFE;
+    --lm-text: #4B6A9B;
+    --lm-text-alt: #2B3442;
+    --lm-shadow-active: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    --lm-shadow-inactive: 0px 16px 30px -10px rgba(0,0,0,0.2);
+    --lm-icon-bg: brightness(100%);
+    /* Btn */
+    --btn: #0079FF;
+    --btn-hover: #60ABFF;
+platform sizing : desktop-tablet-mobile
+
+font-family: Space Mono,monospace
+
+icons with iconify:
+  -twitter:
+  import twitterFill from '@iconify/icons-akar-icons/twitter-fill';
+  <Icon icon={twitterFill} color="#ccc" height="100" />
+  -building:
+  import buildingIcon from '@iconify/icons-bi/building';
+  <Icon icon={buildingIcon} color="#ccc" height="100" />
+  -chain:
+  import linkChain from '@iconify/icons-akar-icons/link-chain';
+  <Icon icon={linkChain} color="#ccc" height="100" />
+  -location marker:
+  import locationMarker from '@iconify/icons-majesticons/location-marker';
+  <Icon icon={locationMarker} color="#ccc" height="100" />
+  -search:
+  import searchIcon from '@iconify/icons-akar-icons/search';
+  <Icon icon={searchIcon} color="#ccc" height="100" />

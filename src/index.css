@@ -1,0 +1,72 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+h1,h1,h3,h4,h5,h6,p{
+  font-family: 'Space Mono',monospace;
+  color: #fff;
+}
+.main-app{
+  height:100vh;
+  width:100vw;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+
+  background-color:#141D2F;
+}
+
+.users-header-section,
+
+form{
+  background: #1E2A47;
+}
+
+form{
+  height:70px;
+  width:600px;
+  border: none;
+  border-radius:14px;
+  padding:10px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form>div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form>div>input{
+  height:40px;
+  width:400px;
+  margin-left:5px;
+  background: none;
+  border:none;
+  outline:none;
+  color: #fff;
+  font-size:1.25rem;
+  letter-spacing: 1px;
+}
+
+form>div>input::placeholder{
+  color:#eee;
+}
+
+button{
+  height:50px;
+  width:100px;
+  background:#0079ff;
+  color: #fff;
+  font-weight:700;
+  font-size:1rem;
+  border:none;
+  border-radius:10px;
+}
