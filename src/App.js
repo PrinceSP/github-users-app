@@ -1,4 +1,4 @@
-import {Header,SearchBar} from './components'
+import {Header,SearchBar,UserInformations} from './components'
 import './index.css'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <div className="main-app">
       <Header/>
       <SearchBar/>
-      <p>Prince and Dinda</p>
+      <UserInformations/>
     </div>
   );
 }
