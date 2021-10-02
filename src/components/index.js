@@ -1,5 +1,5 @@
 import Header from './header'
 import SearchBar from './searchbar'
-import UserInformations from './informationHeader'
+import UserInformation from './usersInformation'
 
-export {Header,SearchBar,UserInformations}
+export {Header,SearchBar,UserInformation}

@@ -20,17 +20,18 @@ h1,h1,h3,h4,h5,h6,p{
   background-color:#141D2F;
 }
 
-.users-header-section,
-
+.user-informations,
 form{
   background: #1E2A47;
 }
 
 form{
   height:70px;
-  width:600px;
+  width:800px;
   border: none;
   border-radius:14px;
+
+  margin-top:28px;
   padding:10px 20px;
 
   display: flex;
@@ -69,4 +70,76 @@ button{
   font-size:1rem;
   border:none;
   border-radius:10px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-direction:row;
+  width:800px;
+}
+
+.user-informations{
+  width: 800px;
+  height: 400px;
+  margin-top:20px;
+  padding:40px;
+
+  border-radius:15px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction:row-reverse;
+}
+
+.img-cont{
+  width:110px;
+  height:110px;
+  background: lightblue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  height:80px;
+  width:120px;
+}
+
+.users-header-section{
+  height:160px;
+  width:570px;
+}
+
+.users-header-section>p:nth-of-type(1){
+  margin-bottom:20px;
+}
+
+.header-section-one{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.user-status{
+  background: #141D2F;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  padding:15px 0;
+  width:570px;
+  border-radius:10px;
+}
+
+.user-status>div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+
+.user-status>div>p{
+  color:#ddd;
 }

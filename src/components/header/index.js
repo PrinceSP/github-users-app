@@ -3,8 +3,9 @@ import '../../index.css'
 
 const Header = ()=>{
   return(
-    <div classID = 'header'>
+    <div className = 'header'>
       <h1>devfinder</h1>
+      <p>Dark</p>
     </div>
   )
 }
