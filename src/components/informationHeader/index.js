@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UserHeader = () => {
+const UserHeader = ({name,dateJoin}) => {
   return (
     <div className="users-header-section">
       <div className='header-section-one'>

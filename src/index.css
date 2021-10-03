@@ -93,21 +93,6 @@ button{
   flex-direction:row-reverse;
 }
 
-.img-cont{
-  width:110px;
-  height:110px;
-  background: lightblue;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-img{
-  height:80px;
-  width:120px;
-}
-
 .users-header-section{
   height:160px;
   width:570px;
@@ -123,6 +108,8 @@ img{
   justify-content: space-between;
 }
 
+
+/* user status style */
 .user-status{
   background: #141D2F;
   display: flex;
@@ -144,7 +131,7 @@ img{
   color:#ddd;
 }
 
-
+/* statistics information style */
 .stat-cont{
   height:60px;
   width:570px;
