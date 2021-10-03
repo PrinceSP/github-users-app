@@ -3,18 +3,19 @@ import UserHeader from '../informationHeader'
 import UserStatus from '../userStatus'
 import UserStats from '../userStats'
 import {Octocat} from '../../assets'
-import Axios from 'axios'
 
-const UserInformation = () => {
+const UserInformation = ({pic,names,uName,bios,repos,following,followers,loc,twit,company,blog}) => {
   const [img,setImg] = useState();
+  const [name,setName] = useState();
+  const [username,setUsername] = useState();
+  const [bio,setBio] = useState();
 
   useEffect(()=>{
-    Axios.get("https://api.github.com/users/princesp").then(res=>{
-      console.log(res.data);
-      setImg(res.data.avatar_url)
-    })
-    .catch(err=>console.log(err))
-  })
+    setImg(pic)
+    setName(names)
+    setUsername(uName)
+    setBio(bios)
+  },[pic,names,uName,bios])
 
   const nulls = img==null;
 
@@ -35,13 +36,19 @@ const UserInformation = () => {
     }
   }
 
-
   return (
     <div className='user-informations'>
       <div>
-        <UserHeader/>
-        <UserStatus/>
-        <UserStats/>
+        <UserHeader name={name}
+          username={username}
+          bio={bio}/>
+        <UserStatus repos={repos}
+          following={following}
+          followers={followers}/>
+        <UserStats loc={loc}
+          twit={twit}
+          company={company}
+          blog={blog}/>
       </div>
       <div style={style.imgCont}>
         <img style={style.imgs} src={nulls ? Octocat : img} alt="user profile pic"/>

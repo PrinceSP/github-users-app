@@ -6,24 +6,24 @@ import locationMarker from '@iconify/icons-majesticons/location-marker';
 import buildingIcon from '@iconify/icons-bi/building';
 import '../../index.css'
 
-const UserStats = () => {
+const UserStats = ({loc='San Francisco',twit,company,blog="https://github.blog"}) => {
   return (
     <div className="stat-cont">
       <div className="stat-item-cont">
         <Icon icon={locationMarker} color="#ccc" height="20" />
-        <p>San Francisco</p>
+        <p>{loc==null?'No location found':loc}</p>
       </div>
       <div className="stat-item-cont">
         <Icon icon={twitterFill} color="#ccc" height="20" />
-        <p>Not Available</p>
+        <p>{twit==null?'Not Available':twit}</p>
       </div>
       <div className="stat-item-cont">
         <Icon icon={linkChain} color="#ccc" height="20" />
-        <p>"https://github.blog"</p>
+        <p>{blog===(null||'')?'No blog url found':blog}</p>
       </div>
       <div className="stat-item-cont">
         <Icon icon={buildingIcon} color="#ccc" height="20" />
-        <p>@github</p>
+        <p>{company==null?'@github':company}</p>
       </div>
     </div>
   )

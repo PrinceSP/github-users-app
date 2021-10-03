@@ -2,14 +2,15 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import searchIcon from '@iconify/icons-akar-icons/search';
 
-const SearchBar = ({value}) => {
+const SearchBar = ({value,handleClick,onChange,onSubmit}) => {
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div>
         <Icon icon={searchIcon} color="#5966f4" height="30" />
-        <input type='text' id='search-bar' placeholder='Search Github username...' value={value}/>
+        <input type='text' id='search-bar' placeholder='Search Github username...' value={value} onChange={onChange}/>
       </div>
-      <button type='submit'>Search</button>
+      <button type='button' onClick={handleClick}>Search</button>
     </form>
   )
 }
