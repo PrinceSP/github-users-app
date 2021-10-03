@@ -17,10 +17,18 @@ function App() {
   const [twit,setTwit] = useState()
   const [company,setComp] = useState()
   const [blog,setBlog] = useState()
+  const [join,setDate] = useState()
+
+  const months=[
+    'Jan','Feb','Mar','Apr',
+    'May','Jun','Jul','Aug',
+    'Sep','Oct','Nov','Dec'
+  ]
 
   const handlebtnSubmit= event =>{
     event.preventDefault()
     Axios.get(`https://api.github.com/users/${value}`).then(res=>{
+      const dates=res.data.created_at.split('T').shift().split('-')
       setImg(res.data.avatar_url)
       setName(res.data.name)
       setUsername(res.data.login)
@@ -32,6 +40,7 @@ function App() {
       setTwit(res.data.twitter_username)
       setComp(res.data.company)
       setBlog(res.data.blog)
+      setDate(`${dates[2]} ${months[dates[1]-1]} ${dates[0]}`)
       setValue('');
     })
   }
@@ -52,6 +61,7 @@ function App() {
         names={name}
         uName={username}
         bios={bio}
+        dateJoin={join}
         repos={repo}
         following={followings}
         followers={followers}

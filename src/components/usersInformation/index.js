@@ -4,7 +4,7 @@ import UserStatus from '../userStatus'
 import UserStats from '../userStats'
 import {Octocat} from '../../assets'
 
-const UserInformation = ({pic,names,uName,bios,repos,following,followers,loc,twit,company,blog}) => {
+const UserInformation = ({pic,names,uName,dateJoin,bios,repos,following,followers,loc,twit,company,blog}) => {
   const [img,setImg] = useState();
   const [name,setName] = useState();
   const [username,setUsername] = useState();
@@ -41,7 +41,8 @@ const UserInformation = ({pic,names,uName,bios,repos,following,followers,loc,twi
       <div>
         <UserHeader name={name}
           username={username}
-          bio={bio}/>
+          bio={bio}
+          dateJoin={dateJoin}/>
         <UserStatus repos={repos}
           following={following}
           followers={followers}/>

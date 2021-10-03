@@ -5,7 +5,7 @@ const UserHeader = ({name='the octocat',dateJoin='date should be here',username=
     <div className="users-header-section">
       <div className='header-section-one'>
         <h1>{name==null ? 'Null' : name}</h1>
-        <p>{dateJoin}</p>
+        <p>{`Joined ${dateJoin}`}</p>
       </div>
       <p>{username}</p>
       <p>{bio === null ? 'This profile has no bio' : bio}</p>
