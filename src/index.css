@@ -47,7 +47,7 @@ form>div{
 
 form>div>input{
   height:40px;
-  width:400px;
+  width:600px;
   margin-left:5px;
   background: none;
   border:none;
@@ -82,7 +82,7 @@ button{
 
 .user-informations{
   width: 800px;
-  height: 400px;
+  height: 430px;
   margin-top:20px;
   padding:40px;
 
@@ -142,4 +142,23 @@ img{
 
 .user-status>div>p{
   color:#ddd;
+}
+
+
+.stat-cont{
+  height:60px;
+  width:570px;
+  margin-top:25px;
+  display:grid;
+  grid-template-columns: repeat(2,250px);
+  grid-template-rows: repeat(2,50px);
+}
+
+.stat-item-cont{
+  display: flex;
+  width:100%;
+}
+
+.stat-item-cont p{
+  margin-left:10px;
 }
