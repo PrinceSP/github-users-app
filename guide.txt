@@ -9,8 +9,10 @@ colors:
     /* Btn */
     --btn: #0079FF;
     --btn-hover: #60ABFF;
-    
+
 platform sizing : desktop-tablet-mobile
+                  -tablet: 1440px;
+                  -mobile: 768px;
 
 font-family: Space Mono,monospace
 

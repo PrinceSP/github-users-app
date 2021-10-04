@@ -9,20 +9,23 @@ const UserInformation = ({pic,names,uName,dateJoin,bios,repos,following,follower
   const [name,setName] = useState();
   const [username,setUsername] = useState();
   const [bio,setBio] = useState();
+  const [media,setMedia] = useState();
+  const mediaQuery = window.matchMedia('(max-width:768px)');
 
   useEffect(()=>{
     setImg(pic)
     setName(names)
     setUsername(uName)
     setBio(bios)
-  },[pic,names,uName,bios])
+    setMedia(mediaQuery)
+  },[pic,names,uName,bios,mediaQuery,media])
 
   const nulls = img==null;
 
   const style = {
     imgCont: {
-      width:'110px',
-      height:'110px',
+      width:mediaQuery.matches?'90px':'120px',
+      height:mediaQuery.matches?'90px':'120px',
       background: nulls ? 'lightblue' : 'none',
       borderRadius: '50%',
       display: 'flex',
@@ -30,8 +33,8 @@ const UserInformation = ({pic,names,uName,dateJoin,bios,repos,following,follower
       justifyContent: 'center'
     },
     imgs:{
-      height:nulls?'80px':'120px',
-      width:nulls?'120px':'120px',
+      height:mediaQuery.matches ? nulls?'75px':'80px' : nulls?'80px':'120px',
+      width:mediaQuery.matches ?  nulls?'85px':'85px' : nulls?'110px':'120px',
       borderRadius: nulls ? '0' : '50%',
     }
   }
@@ -51,8 +54,8 @@ const UserInformation = ({pic,names,uName,dateJoin,bios,repos,following,follower
           company={company}
           blog={blog}/>
       </div>
-      <div style={style.imgCont}>
-        <img style={style.imgs} src={nulls ? Octocat : img} alt="user profile pic"/>
+      <div style={style.imgCont} className='imgCont'>
+        <img style={style.imgs } src={nulls ? Octocat : img} alt="user profile pic"/>
       </div>
     </div>
   )
