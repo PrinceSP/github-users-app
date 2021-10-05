@@ -32,3 +32,9 @@ icons with iconify:
   -search:
   import searchIcon from '@iconify/icons-akar-icons/search';
   <Icon icon={searchIcon} color="#ccc" height="100" />
+  -sun:
+  import sunIcon from '@iconify/icons-emojione/sun';
+  <Icon icon={sunIcon} color="#ccc" height="100" />
+  -moon:
+  import crescentMoon from '@iconify/icons-emojione-v1/crescent-moon';
+  <Icon icon={crescentMoon} color="#ccc" height="100" />

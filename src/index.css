@@ -19,7 +19,13 @@ h1,h1,h3,h4,h5,h6,p{
   justify-content: center;
   flex-direction:column;
 
+}
+
+.dark{
   background-color:#141D2F;
+}
+.light{
+  background-color:#fefefe;
 }
 
 .user-informations,
@@ -65,6 +71,13 @@ form>div>input{
 
 }
 
+.color-change{
+  background: none;
+}
+.color-change:hover{
+  background: none;
+}
+
 form>div>input::placeholder{
   color:#eee;
 }
@@ -81,6 +94,11 @@ button{
   transition:width 500ms ease-in-out;
 }
 
+button:hover{
+  background: #9699f7;
+  cursor: pointer;
+}
+
 .header{
   display: flex;
   align-items: center;
@@ -88,9 +106,22 @@ button{
   flex-direction:row;
   width:800px;
   transition:width 500ms ease-in-out;
-
 }
 
+.header>p{
+  height:30px;
+  width:50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.light-text{
+  color:#fff;
+}
+.dark-text{
+  color:#1E2A47;
+}
 .user-informations{
   position:relative;
   width: 800px;
@@ -124,7 +155,6 @@ button{
   align-items:center;
   justify-content: space-between;
 }
-
 
 /* user status style */
 .user-status{
@@ -203,7 +233,7 @@ button{
     font-size:1.4375rem;
     font-weight:bolder;
   }
-  .header>p{
+  .header>div>p{
     font-size:0.75rem;
   }
 

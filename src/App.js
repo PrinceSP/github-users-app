@@ -18,6 +18,7 @@ function App() {
   const [company,setComp] = useState()
   const [blog,setBlog] = useState()
   const [join,setDate] = useState()
+  let [color,setColor] = useState()
 
   const months=[
     'Jan','Feb','Mar','Apr',
@@ -43,16 +44,16 @@ function App() {
       setDate(`${dates[2]} ${months[dates[1]-1]} ${dates[0]}`)
       setValue('');
     })
+
   }
 
-  const handleChange= event =>{
-    setValue(event.target.value)
-    console.log(event.target.value.toLowerCase());
-  }
+  const handleColorTheme =()=>setColor(!color)
+
+  const handleChange= event =>setValue(event.target.value)
 
   return (
-    <div className="main-app">
-      <Header/>
+    <div className={color?"main-app light":"main-app dark"}>
+      <Header onColor={handleColorTheme} text={color}/>
       <SearchBar value={value}
         handleClick={handlebtnSubmit}
         onChange={handleChange}
