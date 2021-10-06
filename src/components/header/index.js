@@ -18,7 +18,7 @@ const Header = ({onColor,text})=>{
     <div className = 'header'>
       <h1 className={text===true?'dark-text':'light-text'}>devfinder</h1>
       <div style={style.div} onClick={onColor}>
-        <p className={text===true?'dark-text':'light-text'}>{text===true?'Dark':'Light'}</p>
+        <p className={text===true?'dark-text':'light-text'}>{text===true?'DARK':'LIGHT'}</p>
         <button type="button" style={style.btn}>{
             text===true?<Icon icon={crescentMoon} height='30' style={{color:"#777", transform:'rotate(-23deg)'}}/>
           : <Icon icon={sunIcon} color="#ccc" height="30"/>

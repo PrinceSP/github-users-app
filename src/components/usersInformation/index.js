@@ -4,7 +4,7 @@ import UserStatus from '../userStatus'
 import UserStats from '../userStats'
 import {Octocat} from '../../assets'
 
-const UserInformation = ({pic,names,uName,dateJoin,bios,repos,following,followers,loc,twit,company,blog}) => {
+const UserInformation = ({pic,names,color,uName,dateJoin,bios,repos,following,followers,loc,twit,company,blog,statColor}) => {
   const [img,setImg] = useState();
   const [name,setName] = useState();
   const [username,setUsername] = useState();
@@ -40,19 +40,21 @@ const UserInformation = ({pic,names,uName,dateJoin,bios,repos,following,follower
   }
 
   return (
-    <div className='user-informations'>
+    <div className={color?'user-informations lightBg':'user-informations'}>
       <div>
         <UserHeader name={name}
           username={username}
           bio={bio}
-          dateJoin={dateJoin}/>
+          dateJoin={dateJoin}
+          color={color?"dark-text":""}/>
         <UserStatus repos={repos}
           following={following}
           followers={followers}/>
         <UserStats loc={loc}
           twit={twit}
           company={company}
-          blog={blog}/>
+          blog={blog}
+          statColor={color?"darkClr":""}/>
       </div>
       <div style={style.imgCont} className='imgCont'>
         <img style={style.imgs } src={nulls ? Octocat : img} alt="user profile pic"/>

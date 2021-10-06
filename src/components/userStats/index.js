@@ -6,24 +6,24 @@ import locationMarker from '@iconify/icons-majesticons/location-marker';
 import buildingIcon from '@iconify/icons-bi/building';
 import '../../index.css'
 
-const UserStats = ({loc='San Francisco',twit,company='@github',blog="https://github.blog"}) => {
+const UserStats = ({loc='San Francisco',twit,company='@github',blog="https://github.blog",statColor}) => {
   return (
-    <div className="stat-cont">
+    <div className='stat-cont'>
       <div className="stat-item-cont">
-        <Icon icon={locationMarker} color="#ccc" height="20" />
-        <p>{loc==null?'No location found':loc}</p>
+        <Icon icon={locationMarker} color={!statColor && '#ccc'} height="20" />
+        <p className={statColor}>{loc==null?'No location found':loc}</p>
       </div>
       <div className="stat-item-cont">
-        <Icon icon={twitterFill} color="#ccc" height="20" />
-        <p>{twit==null?'Not Available':twit}</p>
+        <Icon icon={twitterFill} color={!statColor && '#ccc'} height="20" />
+        <p className={statColor}>{twit==null?'Not Available':twit}</p>
       </div>
       <div className="stat-item-cont">
-        <Icon icon={linkChain} color="#ccc" height="20" />
-        <p>{blog===(null||'')?'No blog url found':blog}</p>
+        <Icon icon={linkChain} color={!statColor && '#ccc'} height="20" />
+        <p className={statColor}>{blog===(null||'')?'No blog url found':blog}</p>
       </div>
       <div className="stat-item-cont">
-        <Icon icon={buildingIcon} color="#ccc" height="20" />
-        <p>{company==null?'Not found':company}</p>
+        <Icon icon={buildingIcon} color={!statColor && '#ccc'} height="20" />
+        <p className={statColor}>{company==null?'Not found':company}</p>
       </div>
     </div>
   )

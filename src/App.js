@@ -57,7 +57,9 @@ function App() {
       <SearchBar value={value}
         handleClick={handlebtnSubmit}
         onChange={handleChange}
-        onSubmit={handlebtnSubmit}/>
+        onSubmit={handlebtnSubmit}
+        formColor={color?"lightBg":""}
+        inputColor={color?"lightText":""}/>
       <UserInformation pic={img}
         names={name}
         uName={username}
@@ -69,7 +71,9 @@ function App() {
         loc={loc}
         twit={twit}
         company={company}
-        blog={blog}/>
+        blog={blog}
+        color={color}
+        statColor={color}/>
     </div>
   );
 }

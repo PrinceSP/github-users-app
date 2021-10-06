@@ -21,18 +21,26 @@ h1,h1,h3,h4,h5,h6,p{
 
 }
 
+/* main app change background color */
 .dark{
   background-color:#141D2F;
 }
 .light{
-  background-color:#fefefe;
+  background-color:#F6F8FF;
 }
+
 
 .user-informations,
 form{
   background: #1E2A47;
 }
 
+.lightBg{
+  background: #fff;
+  box-shadow: 2px 7px 5px 1px #aeaeae;
+}
+
+/* form styles here */
 form{
   height:70px;
   width:800px;
@@ -45,7 +53,7 @@ form{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition:width 500ms ease-in-out;
+  transition:all 500ms ease-in-out;
 
 }
 
@@ -68,7 +76,15 @@ form>div>input{
   font-size:1.25rem;
   letter-spacing: 1px;
   transition:width 500ms ease-in-out;
+}
 
+form>div>input::placeholder{
+  color:#eee;
+}
+
+form>div>input.lightText,
+form>div>input.lightText::placeholder{
+  color:#4B6A9B;
 }
 
 .color-change{
@@ -76,10 +92,6 @@ form>div>input{
 }
 .color-change:hover{
   background: none;
-}
-
-form>div>input::placeholder{
-  color:#eee;
 }
 
 button{
@@ -108,29 +120,30 @@ button:hover{
   transition:width 500ms ease-in-out;
 }
 
-.header>p{
+.header>div>p{
   height:30px;
   width:50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight:bolder;
 }
 
 .light-text{
   color:#fff;
 }
 .dark-text{
-  color:#1E2A47;
+  color:#1E2A4b;
 }
+
+/* users informations container styles */
 .user-informations{
   position:relative;
   width: 800px;
   height: 430px;
   margin-top:20px;
   padding:40px;
-
   border-radius:15px;
-
   display: flex;
   justify-content: space-between;
   flex-direction:row-reverse;
@@ -179,6 +192,7 @@ button:hover{
 }
 
 /* statistics information style */
+
 .stat-cont{
   height:60px;
   width:570px;
@@ -195,12 +209,16 @@ button:hover{
   width:100%;
 }
 
-.stat-item-cont p{
+.stat-item-cont>p{
   margin-left:10px;
   color:#ababab;
 }
 
-/* 768px */
+.stat-item-cont>p.darkClr{
+  color:#4a4a4a;
+}
+
+/* screen width 768px */
 @media screen and (max-width:768px){
   .main-app{
     min-height:100vh;
